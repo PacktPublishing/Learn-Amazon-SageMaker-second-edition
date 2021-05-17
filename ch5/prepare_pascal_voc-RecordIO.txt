@@ -1,0 +1,21 @@
+$ mkdir pascalvoc
+$ cd pascalvoc
+$ wget https://data.deepai.org/PascalVOC2012.zip
+$ wget https://data.deepai.org/PASCALVOC2007.zip
+$ unzip PascalVOC2012.zip
+$ unzip PASCALVOC2007.zip 
+$ mv VOC2012 VOCtrainval_06-Nov-2007/VOCdevkit
+
+$ cd VOCtrainval_06-Nov-2007
+$ git clone --single-branch --branch v1.4.x https://github.com/apache/incubator-mxnet
+$ python3 incubator-mxnet/example/ssd/tools/prepare_dataset.py --dataset pascal --year 2007,2012 --set trainval --root VOCdevkit --target VOCdevkit/train.lst
+$ mv VOCdevkit/train.* ..
+
+$ cd ../VOCtest_06-Nov-2007
+$ git clone --single-branch --branch v1.4.x https://github.com/apache/incubator-mxnet
+$ python3 incubator-mxnet/example/ssd/tools/prepare_dataset.py --dataset pascal --year 2007 --set test --root VOCdevkit --target VOCdevkit/val.lst
+$ mv VOCdevkit/val.* ..
+
+$ aws s3 cp train.rec s3://sagemaker-REGION-ACCOUNT/pascalvoc/input/train/
+$ aws s3 cp val.rec s3://sagemaker-REGION-ACCOUNT/pascalvoc/input/validation/
+

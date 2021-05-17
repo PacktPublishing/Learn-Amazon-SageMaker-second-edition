@@ -1,0 +1,27 @@
+$ kaggle competitions download -c dogs-vs-cats
+$ unzip dogs-vs-cats.zip
+$ unzip train.zip
+
+$ cd train
+$ mkdir dog cat
+$ find . -name 'dog.*' -exec mv {} dog \;
+$ find . -name 'cat.*' -exec mv {} cat \;
+
+$ mkdir -p val/dog val/cat
+$ ls dog | sort -R | tail -1250 | while read file; do mv dog/$file val/dog; done
+$ ls cat | sort -R | tail -1250 | while read file; do mv cat/$file val/cat; done
+
+$ mkdir train
+$ mv dog cat train
+
+$ wget https://raw.githubusercontent.com/apache/incubator-mxnet/master/tools/im2rec.py
+$ pip install mxnet opencv-python
+
+$ python3 im2rec.py --list --recursive dogscats-train train
+$ python3 im2rec.py --list --recursive dogscats-val val
+
+$ mkdir train_lst val_lst
+$ mv dogscats-train.lst train_lst
+$ mv dogscats-val.lst val_lst
+
+$ aws s3 sync . s3://sagemaker-REGION-ACCOUNT/dogscats-images/input/

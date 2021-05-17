@@ -1,0 +1,16 @@
+$ wget https://data.deepai.org/PascalVOC2012.zip
+$ unzip PascalVOC2012.zip
+
+$ mkdir input
+$ cd input
+$ mkdir train validation train_annotation validation_annotation
+
+$ for file in `cat ../ImageSets/Segmentation/train.txt | xargs`; do cp ../JPEGImages/$file".jpg" train; done
+$ for file in `cat ../ImageSets/Segmentation/val.txt | xargs`; do cp ../JPEGImages/$file".jpg" validation; done
+$ for file in `cat ../ImageSets/Segmentation/train.txt | xargs`; do cp ../SegmentationClass/$file".png" train_annotation; done
+$ for file in `cat ../ImageSets/Segmentation/val.txt | xargs`; do cp ../SegmentationClass/$file".png" validation_annotation; done
+$ for dir in train train_annotation validation validation_annotation; do find $dir -type f | wc -l; done
+
+$ aws s3 sync . s3://sagemaker-REGION-ACCOUNT/pascalvoc-segmentation/input/
+
+

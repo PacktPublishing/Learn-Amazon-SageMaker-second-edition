@@ -1,0 +1,18 @@
+$ kaggle competitions download -c dogs-vs-cats
+$ unzip dogs-vs-cats.zip
+$ unzip train.zip
+
+$ cd train
+$ mkdir dog cat
+$ find . -name 'dog.*' -exec mv {} dog \;
+$ find . -name 'cat.*' -exec mv {} cat \;
+
+$ wget https://raw.githubusercontent.com/apache/incubator-mxnet/master/tools/im2rec.py
+$ pip install mxnet opencv-python
+
+$ python3 im2rec.py --list --recursive --train-ratio 0.9 dogscats .
+$ python3 im2rec.py --num-thread 8 dogscats .
+
+$ aws s3 cp dogscats_train.rec s3://sagemaker-REGION-ACCOUNT/dogscats/input/train/
+$ aws s3 cp dogscats_val.rec s3://sagemaker-REGION-ACCOUNT/dogscats/input/validation/
+
