@@ -5,11 +5,6 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-def install(package):
-    subprocess.call([sys.executable, "-m", "pip", "install", package])
-
-install('dgl')
-
 import dgl
 from dgl.nn import GraphConv
 
