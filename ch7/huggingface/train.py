@@ -1,5 +1,5 @@
 import random, sys, argparse, os, logging, torch
-from transformers import AutoModelForSequenceClassification, Trainer, TrainingArguments
+from transformers import AutoModelForSequenceClassification, AutoTokenizer, Trainer, TrainingArguments
 from sklearn.metrics import accuracy_score, precision_recall_fscore_support
 from datasets import load_from_disk
 
@@ -43,6 +43,10 @@ if __name__ == "__main__":
 
     # download model from model hub
     model = AutoModelForSequenceClassification.from_pretrained(args.model_name)
+    
+    # download the tokenizer too, which will be saved in the model artifact
+    # and used at prediction time
+    tokenizer = AutoTokenizer.from_pretrained(args.model_name)
 
     # define training args
     training_args = TrainingArguments(
@@ -61,6 +65,7 @@ if __name__ == "__main__":
     trainer = Trainer(
         model=model,
         args=training_args,
+        tokenizer=tokenizer,
         compute_metrics=compute_metrics,
         train_dataset=train_dataset,
         eval_dataset=valid_dataset,
@@ -80,4 +85,3 @@ if __name__ == "__main__":
 
     # Saves the model to s3
     trainer.save_model(args.model_dir)
-
