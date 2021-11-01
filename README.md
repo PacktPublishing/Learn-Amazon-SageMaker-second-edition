@@ -51,7 +51,7 @@ We also provide a PDF file that has color images of the screenshots/diagrams use
 
 
 ### Related products <Other books you may enjoy>
-* Machine Learning with Amazon SageMaker Cookbook [[Packt]](https://www.packtpub.com/product/machine-learning-with-amazon-sagemaker-cookbook/9781800567030?utm_source=github&utm_medium=repository&utm_campaign=9781800567030) [[Amazon]](https://www.amazon.com/1800567030)
+* Machine Learning with Amazon SageMaker Cookbook [[Packt]](https://www.packtpub.com/product/machine-learning-with-amazon-sagemaker-cookbook/9781800567030?utm_source=github&utm_medium=repository&utm_campaign=9781800567030) [[Amazon]](https://www.amazon.com/B093TJ9KG2)
 
 * Amazon Redshift Cookbook [[Packt]](https://www.packtpub.com/product/amazon-redshift-cookbook/9781800569683?utm_source=github&utm_medium=repository&utm_campaign=9781800569683) [[Amazon]](https://www.amazon.com/dp/1800569688)
 
