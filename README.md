@@ -1,4 +1,4 @@
-# Learn Amazon SageMaker Second Edition
+# Learn Amazon SageMaker - Second Edition
 
 <a href="https://www.packtpub.com/product/learn-amazon-sagemaker-second-edition/9781801817950?utm_source=github&utm_medium=repository&utm_campaign=9781801817950"><img src="https://static.packt-cdn.com/products/9781801817950/cover/smaller" alt="Learn Amazon SageMaker, Second Edition" height="256px" align="right"></a>
 
