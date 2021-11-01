@@ -2,7 +2,7 @@
 
 <a href="https://www.packtpub.com/product/learn-amazon-sagemaker-second-edition/9781801817950?utm_source=github&utm_medium=repository&utm_campaign=9781801817950"><img src="https://static.packt-cdn.com/products/9781801817950/cover/smaller" alt="Learn Amazon SageMaker, Second Edition" height="256px" align="right"></a>
 
-This is the code repository for [Learn Amazon SageMaker, Second Edition](https://www.packtpub.com/product/learn-amazon-sagemaker-second-edition/9781801817950?utm_source=github&utm_medium=repository&utm_campaign=9781801817950), published by Packt.
+This is the code repository for [Learn Amazon SageMaker - Second Edition](https://www.packtpub.com/product/learn-amazon-sagemaker-second-edition/9781801817950?utm_source=github&utm_medium=repository&utm_campaign=9781801817950), published by Packt.
 
 **A guide to building, training, and deploying machine learning models for developers and data scientists**
 
@@ -41,7 +41,6 @@ output_path=s3_output)
 
 **Following is what you need for this book:**
 This book is for software engineers, machine learning developers, data scientists, and AWS users who are new to using Amazon SageMaker and want to build high-quality machine learning models without worrying about infrastructure. Knowledge of AWS basics is required to grasp the concepts covered in this book more effectively. A solid understanding of machine learning concepts and the Python programming language will also be beneficial.	
-With the following software and hardware list you can run all code files present in the book (Chapter 1-10).
 
 ### Software and Hardware List
 
@@ -56,7 +55,7 @@ We also provide a PDF file that has color images of the screenshots/diagrams use
 
 * Amazon Redshift Cookbook [[Packt]](https://www.packtpub.com/product/amazon-redshift-cookbook/9781800569683?utm_source=github&utm_medium=repository&utm_campaign=9781800569683) [[Amazon]](https://www.amazon.com/dp/1800569688)
 
-## Get to Know the Authors
+## Get to Know the Author
 **Julien Simon**
 is a Principal Developer Advocate for AI & Machine Learning at Amazon Web Services. He focuses on helping developers and enterprises bring their ideas to life. He frequently speaks at conferences, blogs on the AWS Blog and on Medium, and he also runs an AI/ML podcast.
 Prior to joining AWS, Julien served for 10 years as CTO/VP Engineering in top-tier web startups where he led large Software and Ops teams in charge of thousands of servers worldwide. In the process, he fought his way through a wide range of technical, business and procurement issues,
