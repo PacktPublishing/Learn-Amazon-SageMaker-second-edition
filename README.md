@@ -60,3 +60,7 @@ We also provide a PDF file that has color images of the screenshots/diagrams use
 is a Principal Developer Advocate for AI & Machine Learning at Amazon Web Services. He focuses on helping developers and enterprises bring their ideas to life. He frequently speaks at conferences, blogs on the AWS Blog and on Medium, and he also runs an AI/ML podcast.
 Prior to joining AWS, Julien served for 10 years as CTO/VP Engineering in top-tier web startups where he led large Software and Ops teams in charge of thousands of servers worldwide. In the process, he fought his way through a wide range of technical, business and procurement issues,
 which helped him gain a deep understanding of physical infrastructure, its limitations and how cloud computing can help.
+### Download a free PDF
+
+ <i>If you have already purchased a print or Kindle version of this book, you can get a DRM-free PDF version at no cost.<br>Simply click on the link to claim your free PDF.</i>
+<p align="center"> <a href="https://packt.link/free-ebook/9781801817950">https://packt.link/free-ebook/9781801817950 </a> </p>
